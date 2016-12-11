@@ -1,3 +1,14 @@
+<!--
+ * dashboard.component.html
+ *
+ * Author:  Martin Tracey
+ * Created: 12.10.2016
+ * 
+ * Template file for the Dashboard component of the app.
+ * 
+ * See https://angular.io/docs/ts/latest/tutorial to learn more about Angular 2.
+ -->
+
 <h3>Top Heroes</h3>
 <div class="grid grid-pad">
     <a *ngFor="let hero of heroes" [routerLink]="['/detail', hero.id]" class="col-1-4">

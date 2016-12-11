@@ -1,3 +1,14 @@
+/*
+ * dashboard.component.css
+ *
+ * Author:  Martin Tracey
+ * Created: 12.10.2016
+ * 
+ * Defines the styles for the Dashboard component of the app.
+ * 
+ * See https://angular.io/docs/ts/latest/tutorial to learn more about Angular 2.
+ */
+
 [class*='col-'] {
   float: left;
   padding-right: 20px;

@@ -1,3 +1,15 @@
+/*
+ * hero-detail.component.ts
+ * 
+ * Author:  Martin Tracey
+ * Created: 12.10.2016
+ * 
+ * The Hero Detail component of the app. 
+ * Will display the details of a hero when a Hero is clicked from within the Heroes component.
+ * 
+ * See https://angular.io/docs/ts/latest/tutorial to learn more about Angular 2.
+ */
+
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
@@ -28,6 +40,11 @@ export class HeroDetailComponent implements OnInit {
         this.route.params
             .switchMap((params: Params) => this.heroService.getHero(+params['id']))
             .subscribe(hero => this.hero = hero);
+    }
+
+    save(): void {
+        this.heroService.update(this.hero)
+            .then(() => this.goBack());
     }
 
     goBack(): void {

@@ -1,3 +1,15 @@
+/*
+ * dashboard.component.ts
+ * 
+ * Author:  Martin Tracey
+ * Created: 12.10.2016
+ * 
+ * The Dashboard component of the app. 
+ * Will display the top 5 heroes in the app and will also provide navigation links to access the other components in the app.
+ * 
+ * See https://angular.io/docs/ts/latest/tutorial to learn more about Angular 2.
+ */
+
 import { Component, OnInit } from '@angular/core';
 
 import { Hero } from './hero';
