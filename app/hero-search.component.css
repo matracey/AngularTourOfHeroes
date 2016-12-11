@@ -1,0 +1,25 @@
+/*
+ * hero-search.component.css
+ * 
+ * Author:  Martin Tracey
+ * Created: 12.11.2016
+ * 
+ * Defines the styles for the Hero Search component of the app.
+ * 
+ * See https://angular.io/docs/ts/latest/tutorial to learn more about Angular 2.
+ */
+
+.search-result{
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  width:195px;
+  height: 20px;
+  padding: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+#search-box{
+  width: 200px;
+  height: 20px;
+}
