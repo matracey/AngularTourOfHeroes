@@ -8,13 +8,13 @@
  * 
  * See https://angular.io/docs/ts/latest/tutorial to learn more about Angular 2.
  -->
-
-<div id="search-component">
-    <h4>Hero Search</h4>
-    <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
-    <div>
-        <div *ngFor="let hero of heroes | async" (click)="gotoDetail(hero)" class="search-result">
-            {{hero.name}}
+<form class="form-inline float-xs-right">
+    <div class="dropdown" [class.open]="searchBox.value !== '' && (heroes | async)?.length > 0">
+        <input #searchBox class="form-control" type="text" placeholder="Search for a Hero" (keyup)="search(searchBox.value)" />
+        <div class="dropdown-menu">
+            <div *ngFor="let hero of heroes | async" (click)="gotoDetail(hero)" class="dropdown-item">
+                {{hero.name}}
+            </div>
         </div>
     </div>
-</div>
+</form>

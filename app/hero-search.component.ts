@@ -45,7 +45,7 @@ export class HeroSearchComponent implements OnInit {
             .debounceTime(300) // wait for 300ms pause in events
             .distinctUntilChanged() // ignore if the next search term is the same as the previous one.
             // Switch to a new Observable each time and return either the Http Observable or an empty Observable Hero array if there is no search term.
-            .switchMap( term => term ? this.heroSearchService.search(term) : Observable.of<Hero[]>([]) )
+            .switchMap(term => term ? this.heroSearchService.search(term) : Observable.of<Hero[]>([]))
             .catch(e => {
                 console.error(e);
                 return Observable.of<Hero[]>([]);
