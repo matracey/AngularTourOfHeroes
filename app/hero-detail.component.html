@@ -8,14 +8,26 @@
  * 
  * See https://angular.io/docs/ts/latest/tutorial to learn more about Angular 2.
  -->
-
 <div *ngIf="hero">
-    <h2>{{hero.name}} details!</h2>
-    <div><label>id: </label>{{hero.id}}</div>
-    <div>
-        <label>name: </label>
-        <input [(ngModel)]="hero.name" placeholder="name">
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+            <h3>{{hero.name}} Details</h3>
+        </div>
     </div>
-    <button (click)="save()">Save</button>
-    <button (click)="goBack()">Back</button>
+    <div class="form-group row">
+        <label class="col-form-label col-xs-2" for="hero-id">Id:</label>
+        <div class="col-xs-10"><span class="form-control" id="hero-id">{{hero.id}}</span></div>
+    </div>
+    <div class="form-group row">
+        <label class="col-form-label col-xs-2" for="hero-name">Name:</label>
+        <div class="col-xs-10"><input [(ngModel)]="hero.name" class="form-control" placeholder="name" id="hero-name"></div>
+    </div>
+    <div class="form-group row">
+        <div class="col-xs-2">
+            <button (click)="save()" class="btn btn-block btn-primary">Save</button>
+        </div>
+        <div class="col-xs-2">
+            <button (click)="goBack()" class="btn btn-block btn-danger">Back</button>
+        </div>
+    </div>
 </div>
