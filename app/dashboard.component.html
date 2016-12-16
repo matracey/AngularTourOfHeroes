@@ -8,15 +8,15 @@
  * 
  * See https://angular.io/docs/ts/latest/tutorial to learn more about Angular 2.
  -->
-<div class="row">
+<div class="row padded">
     <div class="col-xs-8 col-xs-offset-2">
-        <h3>Top Heroes</h3>
+        <h2>Top Heroes</h2>
     </div>
 </div>
-<div class="row">
+<div class="row padded">
     <div *ngFor="let hero of heroes" class="col-lg-3 col-md-6 col-xs-12">
-        <a [routerLink]="['/detail', hero.id]">
-            <div class="card card-block card-inverse card-primary text-xs-center">
+        <a [routerLink]="['/detail', hero.id]" class="hero-card-link">
+            <div class="card card-block card-inverse card-primary text-xs-center hero-card">
                 <div class="card-block">
                     <h4 class="card-title">{{hero.name}}</h4>
                 </div>

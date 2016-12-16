@@ -8,7 +8,7 @@
  * 
  * See https://angular.io/docs/ts/latest/tutorial to learn more about Angular 2.
  -->
-<form class="form-inline float-xs-right">
+<form class="form-inline float-lg-right">
     <div class="dropdown" [class.open]="searchBox.value !== '' && (heroes | async)?.length > 0">
         <input #searchBox class="form-control" type="text" placeholder="Search for a Hero" (keyup)="search(searchBox.value)" />
         <div class="dropdown-menu">

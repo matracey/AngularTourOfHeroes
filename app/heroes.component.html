@@ -8,22 +8,43 @@
  * 
  * See https://angular.io/docs/ts/latest/tutorial to learn more about Angular 2.
  -->
-
-<h2>My Heroes</h2>
-<div>
-    <label>Hero name: </label><input #heroName />
-    <button (click)="add(heroName.value); heroName.value=''">Add</button>
+<div class="row padded">
+    <div class="col-xs-8">
+        <h2>My Heroes</h2>
+    </div>
 </div>
-<ul class="heroes">
-    <li *ngFor="let hero of heroes" 
-        [class.selected]="hero === selectedHero"
-        (click)="onSelect(hero)">
-        <span class="badge">{{hero.id}}</span>
-        <span>{{hero.name}}</span>
-        <button class="delete" (click)="delete(hero); $event.stopPropagation()">x</button>
-    </li>
-</ul>
-<div *ngIf="selectedHero">
-    <h2>{{ selectedHero.name | uppercase }} is my hero.</h2>
-    <button (click)="gotoDetail()">View Details</button>
+<div class="row padded">
+    <div class="col-xs-12">
+        <form class="form-inline">
+            <div class="form-group">
+                <input type="text" class="form-control" id="heroName" placeholder="Hero Name" #heroName />
+            </div>
+            <button (click)="add(heroName.value); heroName.value=''" class="btn btn-primary">Add Hero</button>
+        </form>
+    </div>
+</div>
+<div class="row padded">
+    <div class="col-xs-12 col-md-6">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let hero of heroes" [class.active]="hero === selectedHero" (click)="onSelect(hero)">
+                <span class="tag tag-info float-xs-left">{{hero.id}}</span>
+                <span>{{hero.name}}</span>
+                <button class="btn btn-danger float-xs-right" (click)="delete(hero); $event.stopPropagation()">x</button>
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="selectedHero">
+        <div class="col-xs-12 col-md-6">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>{{ selectedHero.name | uppercase }} is my hero.</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3">
+                    <button class="btn btn-default btn-block" (click)="gotoDetail()">View Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,31 +1,17 @@
 /* Master Styles */
-
-h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
+ul.list-group > li.list-group-item > span.tag.float-xs-left {
+    margin-right: 12px;
 }
 
-h2, h3 {
-  color: #444;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
+ul.list-group > li.list-group-item > .btn.float-xs-right {
+    padding: 2px 12px;
 }
 
-body {
-  margin: 2em;
+div.padded {
+    padding-top: 12px;
+    padding-bottom: 6px;
 }
 
-body, input[text], button {
-  color: #888;
-}
-
-
-/* . . . */
-
-
-/* everywhere else */
-
-* {
-  font-family: Arial, Helvetica, sans-serif;
+a.hero-card-link {
+    text-decoration: none;
 }

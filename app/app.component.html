@@ -8,9 +8,10 @@
  * 
  * See https://angular.io/docs/ts/latest/tutorial to learn more about Angular 2.
  -->
-
-<nav class="navbar navbar-light bg-faded">
-    <p class="navbar-brand">{{title}}</p>
+<nav class="navbar navbar-dark bg-inverse">
+  <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+  <a class="navbar-brand" routerLink="/">{{title}}</a>
+  <div class="collapse navbar-toggleable-md" id="navbarResponsive">
     <ul class="nav navbar-nav">
         <li class="nav-item" routerLinkActive="active">
             <a routerLink="/dashboard" class="nav-link">Dashboard</a>
@@ -19,6 +20,10 @@
             <a routerLink="/heroes" class="nav-link">Heroes</a>
         </li>
     </ul>
-    <hero-search></hero-search>
+    <hero-search></hero-search>    
+  </div>
 </nav>
-<router-outlet></router-outlet>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

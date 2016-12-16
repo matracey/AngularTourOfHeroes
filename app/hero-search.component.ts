@@ -22,7 +22,6 @@ import { Hero } from './hero';
     moduleId: module.id,
     selector: 'hero-search',
     templateUrl: 'hero-search.component.html',
-    styleUrls: ['hero-search.component.css'],
     providers: [
         HeroSearchService
     ]
